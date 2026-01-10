@@ -1,9 +1,9 @@
-﻿class Mussica()
+﻿class Musica()
 {
 
-    public string Nome { get; set; } = "";
-    public string Artista { get; set; } = "";
-    public int Duracao { get; set; } = 0; // duração em segundos
+    public string Nome { get; set; }
+    public string Artista { get; set; } 
+    public int Duracao { get; set; } 
     public bool Disponivel { get; set; }
     public string DescricaoResumida => $"Nome da Musica {Nome} é do artista {Artista}";
 

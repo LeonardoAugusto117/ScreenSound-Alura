@@ -1,16 +1,17 @@
-﻿Mussica musica1 = new Mussica();
-musica1.Nome = "Imagine";
-musica1.Artista = "John Lennon";
-musica1.Duracao = 183;
-musica1.Disponivel = true;
+﻿Album albumQuenn = new Album();
+albumQuenn.Nome = "Greatest Hits";
+
+Musica musica1 = new Musica();
+musica1.Nome = "Bohemian Rhapsody";
+musica1.Duracao = 354;
+
+Musica musica2 = new Musica();
+musica2.Nome = "Don't Stop Me Now";
+musica2.Duracao = 210;
 
 
-
-Mussica musica2 = new Mussica();
-musica2.Nome = "Billie Jean";
-musica2.Artista = "Michael Jackson";
-musica2.Duracao = 294;
-musica2.Disponivel = false;
+albumQuenn.AdicionarMusica(musica1);
+albumQuenn.AdicionarMusica(musica2);
 
 
-musica2.ExibirFichaTecnica();
+albumQuenn.exibirMusicas();
