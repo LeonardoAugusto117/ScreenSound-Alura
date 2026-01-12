@@ -1,8 +1,13 @@
-﻿class Musica()
+﻿class Musica
 {
+    public Musica(Banda artista, string nome)
+    {
+        Artista = artista;
+        Nome = nome;
+    }
 
-    public string Nome { get; set; }
-    public string Artista { get; set; } 
+    public string Nome { get; }
+    public Banda Artista { get;} 
     public int Duracao { get; set; } 
     public bool Disponivel { get; set; }
     public string DescricaoResumida => $"Nome da Musica {Nome} é do artista {Artista}";
@@ -20,7 +25,7 @@
         Console.WriteLine(DescricaoResumida);
         Console.WriteLine();
         Console.WriteLine($"Nome Musica: {Nome}");
-        Console.WriteLine($"Nome Artista: {Artista}");
+        Console.WriteLine($"Nome Artista: {Artista.Nome}");
         Console.WriteLine($"Duração  da Musica: {Duracao}");
 
         // código omitido
