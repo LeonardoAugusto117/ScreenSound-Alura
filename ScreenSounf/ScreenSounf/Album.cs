@@ -7,22 +7,22 @@
         Nome = nome;
     }
 
-    public string Nome { get;  }
-
+    public string Nome { get; }
     public int DuracaoTotal => musicas.Sum(m => m.Duracao);
-    
+    public List<Musica> Musicas => musicas;
+
     public void AdicionarMusica(Musica musica)
     {
         musicas.Add(musica);
     }
-    
-    public void exibirMusicas()
+
+    public void ExibirMusicasDoAlbum()
     {
-        Console.WriteLine($"Músicas no álbum {Nome}:\n");
+        Console.WriteLine($"Lista de músicas do álbum {Nome}:\n");
         foreach (var musica in musicas)
         {
-            Console.WriteLine($"- {musica.Nome}");
+            Console.WriteLine($"Música: {musica.Nome}");
         }
-        Console.WriteLine($"\nDuração total do álbum: {DuracaoTotal} segundos");
+        Console.WriteLine($"\nPara ouvir este álbum inteiro você precisa de {DuracaoTotal}");
     }
 }
