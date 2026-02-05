@@ -4,7 +4,7 @@ class Album
 {
     private List<Musica> musicas = new List<Musica>();
 
-    internal public Album(string nome)
+    public Album(string nome)
     {
         Nome = nome;
     }
