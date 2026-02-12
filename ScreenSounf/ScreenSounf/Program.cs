@@ -22,7 +22,8 @@ internal class Program : Menu
         opcoes.Add(2, new MenuRegistrarAlbum());
         opcoes.Add(3, new MenuMostrarBandaRegistrada());
         opcoes.Add(4, new MenuAvaliarBanda());
-        opcoes.Add(5, new MenuExibirDetalhes());
+        opcoes.Add(5, new MenuAvaliarAlbum());
+        opcoes.Add(6, new MenuExibirDetalhes());
         opcoes.Add(-1, new MenuSair());
 
 
@@ -49,7 +50,8 @@ internal class Program : Menu
             Console.WriteLine("Digite 2 para registrar o álbum de uma banda");
             Console.WriteLine("Digite 3 para mostrar todas as bandas");
             Console.WriteLine("Digite 4 para avaliar uma banda");
-            Console.WriteLine("Digite 5 para exibir os detalhes de uma banda");
+            Console.WriteLine("Digite 5 para avaliar uma album");
+            Console.WriteLine("Digite 6 para exibir os detalhes de uma banda");
             Console.WriteLine("Digite -1 para sair");
 
             Console.Write("\nDigite a sua opção: ");
@@ -62,7 +64,7 @@ internal class Program : Menu
             if (opcoes.ContainsKey(opcaoEscolhidaNumerica))
             {
                 Menu menuASerExibido = opcoes[opcaoEscolhidaNumerica];
-                menuASerExibido.Executar(bandasRegistradas);
+                menuASerExibido.Executar(bandasRegistradas); 
                 if (opcaoEscolhidaNumerica > 0) ExibirOpcoesDoMenu();
             }
             else
